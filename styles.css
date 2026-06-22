@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    min-height:100vh;
+}
+
+header{
+    background:#1A3C5E;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+}
+
+input{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    width:220px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#2E86AB;
+    color:white;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    background:#216e8d;
+}
+
+main{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.hero{
+    background:#2E86AB;
+    color:white;
+    text-align:center;
+    padding:40px;
+    border-radius:10px;
+}
+
+#weatherIcon{
+    font-size:70px;
+}
+
+#temperature{
+    font-size:60px;
+    margin:10px 0;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.forecast-section{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+.forecast-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.forecast-card:hover{
+    background:#f0f8ff;
+}
+
+#loading{
+    text-align:center;
+    color:blue;
+    margin-bottom:10px;
+}
+
+#error{
+    text-align:center;
+    color:red;
+    margin-bottom:10px;
+}
+
+@media(max-width:480px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .search-box{
+        width:100%;
+        flex-direction:column;
+    }
+
+    input{
+        width:100%;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .forecast-card{
+        flex-direction:column;
+        gap:10px;
+    }
+}
